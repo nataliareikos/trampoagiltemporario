@@ -11,19 +11,101 @@
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
 
 <body>
-    <h2>ENTRAR</h2>
+        <header>
+            <div class="container">
+                    <nav>
+                        <a href="/">
+                            <h1 class="logo">Trampo<span>Ágil</span></h1>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">Sou Empresa</a>
+                            </li>
+                            <li>
+                                <a href="">Sou Candidato</a>
+                            </li>
+                            <li>
+                                <a href="">Sobre Nós</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'login_candidatos' %}">Entrar</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'vagas' %}">Vagas</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+        </header>
 
-    <div class="divLoginForm">
-    <div class="container-login100">
-    <div class="wrap-login100 p-t-50 p-b-90">
-        <form action="." method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-         <a href="{% url 'candidatos' %}"> 
-             
-            <button>Entrar</button></a>
-
-        </form>
-    </div>
+        <main class="mainlogin">
+            <div class="divLoginForm">
+                <div class="container-login100">
+                    <div class="wrap-login100 p-t-50 p-b-90">
+                            <h1>LOGIN</h1>
+                        <form class="formulariologin" action="." method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <a href="{% url 'candidatos' %}"> </a>
+                    
+                            <button>Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+                <div class="container">
+                    <h1 class="logo">Trampo<span>Ágil</span></h1>
+                    <ul>
+                        <li>
+                            <h4>TrampoÁgil</h4>
+                        </li>
+                        <li>Sobre nós</li>
+                        <li>Trabalhe conosco</li>
+                        <!-- <li>Blog</li> -->
+                        <li>Calculadora de salários</li>
+                        <li>Central de ajuda</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>Sou empresa</h4>
+                        </li>
+                        <li>Como funciona</li>
+                        <li>Histórias de sucesso</li>
+                        <li>Recomende e ganhe</li>
+                        <li>Blog empresas</li>
+                        <li>Dúvidas</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>Sou candidato</h4>
+                        </li>
+                        <li>Como funciona</li>
+                        <li>Histórias de sucesso</li>
+                        <li>Recomende e ganhe</li>
+                        <!-- <li>Blog candidatos</li> -->
+                        <li>Dúvidas</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>Contato</h4>
+                        </li>
+                        <li>
+                            <address>
+                                <a href="tel:+55 11 4444-5555">+55 11 4444-5555</a>
+                                <a href="mailto:hello@trampoagil.com">hello@trampoagil.com</a>
+                                <p>Avenida Paulista 1374, 20º Andar - Cerqueira César - São Paulo/SP</p>
+                            </address>
+                        </li>
+                        <aside class="icons">
+                            <img src="{% static '../static/img/linkedin.png' %}" alt="" width="18" height="18">
+                            <img src="{% static '../static/img/facebook.png' %}" alt="" width="18" height="18">
+                            <img src="{% static '../static/img/youtube.png' %}" alt="" width="18" height="20"> 
+                        </aside>
+                    </ul>
+                </div><!-- /class="container" -->
+            </footer>
 </body>
 </html>
